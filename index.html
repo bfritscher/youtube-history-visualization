@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>YouTube history</title>
+	<link rel="stylesheet" type="text/css" href="dc.css"/>
+</head>
+<body>
+<div class="main">
+	<div id="list-widget">
+		<div class="progress"></div>
+		<div id="list">
+		
+		</div>
+		showing <span class="start"></span>
+		-
+		<span class="end"></span> 
+		from <span class="filter-count"></span> selected out of <span class="total-count"></span> records, watchtime <span class="totaltime"></span>
+	</div>
+
+	<div id="days">
+		<div>
+			<span class="title">Days</span>
+			<a class="reset" href="javascript:daysChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+			<span class="reset" style="display: none;">Current filter: <span class="filter"></span></span>
+		</div>
+	</div>
+	<div id="days-overview">
+	</div>
+</div>
+	
+	<input type="text" id="search" placeholder="search"/>
+	<div id="category">
+		<div>
+			<span class="title">Categories</span>
+			<a class="reset" href="javascript:categoryChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+			<span class="reset" style="display: none;"></span>
+		</div>
+	</div>
+	
+	<div id="day">
+		<div>
+			<span class="title">Day of Week</span>
+			<a class="reset" href="javascript:dayChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+			<span class="reset" style="display: none;"></span>
+		</div>
+	</div>
+		
+	<div id="duration">
+		<div>
+			<span class="title">Duration</span>
+			<a class="reset" href="javascript:durationChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+			<span class="reset" style="display: none;">Current filter: <span class="filter"></span> min</span>
+		</div>
+	</div>
+
+	<div id="hours">
+		<div>
+			<span class="title">Time of Day</span>
+			<a class="reset" href="javascript:hoursChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+			<span class="reset" style="display: none;">Current filter: <span class="filter"></span></span>
+		</div>
+	</div>
+
+	<h1 id="logo">You<span class="accent">Tube</span><sup>history</sup></h1>
+	
+	<div id="detail-background" style="opacity:1"></div>
+	<div id="detail" style="display:none">
+		<iframe width="900" height="506" src="" frameborder="0" allowfullscreen></iframe>
+		<div>
+			<div class="description"></div>
+			<div class="detail-footer">
+			W <span class="watchdate"></span>
+			U <span class="uploaddate"></span>
+			V <span class="views"></span>
+			C <span class="category"></span>
+			<a href="" class="uploader"></a>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<script src="d3.min.js"></script>
+	<script src="crossfilter.min.js"></script>
+	<script src="dc.min.js"></script>
+	<script src="linkify.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
